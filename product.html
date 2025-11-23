@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Product Details — Luxury Christmas Shop</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="container">
+    <a class="brand" href="index.html">Luxury<span>Christmas</span></a>
+    <nav>
+      <a href="index.html">Home</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container product-page">
+  <div id="product-detail"></div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-left">
+      <h4>Luxury Christmas Shop</h4>
+      <p>Premium packaging & delivery — Customer service available</p>
+    </div>
+    <div class="footer-right">
+      <p>WhatsApp: +44 7724 500272</p>
+    </div>
+  </div>
+</footer>
+<script>
+const products = {
+  'epicea-large': {
+    title:'Grand Epicea Tree',
+    img:'images/Grand Epicea Tree.jpg',
+    details: {
+      description:'A majestic, full-bodied spruce with rich green needles, perfect for large living rooms or halls.',
+      height:'Approx. 2.0–2.5m',
+      foliage:'Dense, sharp needles, dark green color',
+      fragrance:'Fresh pine scent, long-lasting',
+      care:'Keep in water; avoid heat sources; trim lower branches if needed',
+      shipping:'Delivered upright with stand included',
+      packaging:'Natural protective wrapping for safe delivery'
+    }
+  },
+  'nordmann-premium': {
+    title:'Premium Nordmann Tree',
+    img:'images/Premium Nordmann Tree.jpeg',
+    details: {
+      description:'Soft-needled tree, ideal for families with children and pets.',
+      height:'Approx. 1.8–2.2m',
+      foliage:'Soft, dark green, glossy needles',
+      fragrance:'Mild, pleasant pine aroma',
+      care:'Keep soil moist; rotate for even growth',
+      shipping:'Delivered upright with protective packaging',
+      packaging:'Elegant wrapping included'
+    }
+  },
+  'picea-deluxe': {
+    title:'Deluxe Selection Tree',
+    img:'images/Deluxe Selection Tree.jpg',
+    details: {
+      description:'Carefully selected trees with premium symmetry and fullness.',
+      height:'Approx. 2.0m',
+      foliage:'Dense, dark green needles, ideal for ornaments',
+      fragrance:'Fresh pine fragrance',
+      care:'Water daily; avoid radiators and direct sunlight',
+      shipping:'Securely packaged for home delivery',
+      packaging:'Premium natural wrap to protect needles'
+    }
+  },
+  'sapin-small-elegance': {
+    title:'Small Elegance Tree',
+    img:'images/Small Elegance Tree.jpeg',
+    details: {
+      description:'Compact and stylish, perfect for apartments and small offices.',
+      height:'Approx. 1.2m',
+      foliage:'Soft, lightweight needles',
+      fragrance:'Subtle pine aroma',
+      care:'Minimal water needed; place on stable surface',
+      shipping:'Delivered in protective box',
+      packaging:'Wrapped for easy unboxing'
+    }
+  },
+  'sapin-artificiel-premium': {
+    title:'Premium Artificial Tree',
+    img:'images/Premium Artificial Tree.jpg',
+    details: {
+      description:'High-quality reusable tree with realistic appearance.',
+      height:'Approx. 2.0m',
+      foliage:'Synthetic, realistic needles with sturdy branches',
+      fragrance:'No natural scent',
+      care:'Dust occasionally; store in dry place after holidays',
+      shipping:'Flat-packed, easy to assemble',
+      packaging:'Includes tree stand and protective bag'
+    }
+  },
+  'fraser-fir': {
+    title:'Fraser Fir',
+    img:'images/Fraser Fir.jpg',
+    details: {
+      description:'Elegant Christmas tree with strong branches and excellent needle retention.',
+      height:'Approx. 2.0–2.3m',
+      foliage:'Dense, dark green needles, upward-pointing branches',
+      fragrance:'Rich pine aroma, traditional Christmas scent',
+      care:'Water daily; trim bottom branches if needed',
+      shipping:'Delivered upright with stand included',
+      packaging:'Natural protective wrapping included'
+    }
+  },
+  'blue-spruce': {
+    title:'Blue Spruce',
+    img:'images/Blue Spruce.jpg',
+    details: {
+      description:'Distinctive bluish needles and sturdy branches.',
+      height:'Approx. 2.0m',
+      foliage:'Blue-tinted, stiff needles',
+      fragrance:'Fresh pine scent',
+      care:'Keep soil moist; avoid direct sunlight',
+      shipping:'Upright delivery with protective wrap',
+      packaging:'Premium wrapping included'
+    }
+  },
+  'white-pine': {
+    title:'White Pine',
+    img:'images/White Pine.jpg',
+    details: {
+      description:'Soft, elegant tree with long needles, ideal for ornaments.',
+      height:'Approx. 1.8–2.0m',
+      foliage:'Soft, long needles',
+      fragrance:'Mild pine scent',
+      care:'Keep in water; avoid high heat',
+      shipping:'Delivered upright safely',
+      packaging:'Protective wrapping included'
+    }
+  },
+  'noble-fir': {
+    title:'Noble Fir',
+    img:'images/Noble Fir.webp',
+    details: {
+      description:'Highly symmetrical tree with premium luxury appearance.',
+      height:'Approx. 2.2–2.5m',
+      foliage:'Dense, soft needles',
+      fragrance:'Classic pine fragrance',
+      care:'Keep in water; avoid heat sources',
+      shipping:'Upright delivery with stand',
+      packaging:'Premium protective wrapping'
+    }
+  },
+  'scotch-pine': {
+    title:'Scotch Pine',
+    img:'images/Scotch Pine.jpg',
+    details: {
+      description:'Classic long-lasting pine aroma with traditional look.',
+      height:'Approx. 2.0m',
+      foliage:'Bright green, long needles',
+      fragrance:'Strong pine scent',
+      care:'Water regularly; rotate for symmetry',
+      shipping:'Safe upright delivery',
+      packaging:'Natural protective wrapping'
+    }
+  },
+  'coffret-or': {
+    title:'Gold Gift Box — Fine Chocolates',
+    img:'images/Gold Gift Box — Fine Chocolates.webp',
+    details: {
+      description:'Assorted premium chocolates in luxurious golden packaging.',
+      ingredients:'Dark chocolate, milk chocolate, ganache, pralines, nuts',
+      weight:'Approx. 250g',
+      packaging:'Gold luxury box with ribbon',
+      storage:'Keep in cool dry place, avoid sunlight',
+      shipping:'Delivered in protective packaging'
+    }
+  },
+  'coffret-choco-noel': {
+    title:'Christmas Chocolate Box',
+    img:'images/Christmas Chocolate Box.jpg',
+    details: {
+      description:'Ganaches and pralines perfect for Christmas gifting.',
+      ingredients:'Milk chocolate, white chocolate, pralines, caramel',
+      weight:'Approx. 200g',
+      packaging:'Festive Christmas box',
+      storage:'Keep in cool dry place',
+      shipping:'Safe delivery with protection'
+    }
+  },
+  'silver-gift-box': {
+    title:'Silver Gift Box',
+    img:'images/Silver Gift Box.jpg',
+    details: {
+      description:'Assorted premium chocolates in elegant silver packaging.',
+      ingredients:'Dark chocolate, milk chocolate, pralines, nuts, caramels',
+      weight:'Approx. 300g',
+      packaging:'Silver gift box with ribbon',
+      storage:'Store in cool dry place',
+      shipping:'Delivered safely'
+    }
+  },
+  'holiday-chocolate-trio': {
+    title:'Holiday Chocolate Trio',
+    img:'images/Holiday Chocolate Trio.avif',
+    details: {
+      description:'Three mini boxes of assorted chocolates, ideal for gifting.',
+      ingredients:'Ganache, pralines, milk & dark chocolates',
+      weight:'3x100g',
+      packaging:'Festive mini boxes',
+      storage:'Keep in cool dry place',
+      shipping:'Delivered with care'
+    }
+  }
+};
+
+const urlParams = new URLSearchParams(window.location.search);
+const productId = urlParams.get('id');
+const container = document.getElementById('product-detail');
+
+
+if(products[productId]){
+  const product = products[productId];
+  const d = product.details;
+  container.innerHTML = `
+    <div class="product-main">
+      <img src="${product.img}" alt="${product.title}">
+      <div class="product-info">
+        <h1>${product.title}</h1>
+        <p><strong>Description:</strong> ${d.description}</p>
+        ${d.height?`<p><strong>Height/Size:</strong> ${d.height}</p>`:''}
+        ${d.foliage?`<p><strong>Foliage / Texture:</strong> ${d.foliage}</p>`:''}
+        ${d.fragrance?`<p><strong>Fragrance:</strong> ${d.fragrance}</p>`:''}
+        ${d.care?`<p><strong>Care Instructions:</strong> ${d.care}</p>`:''}
+        ${d.ingredients?`<p><strong>Ingredients:</strong> ${d.ingredients}</p>`:''}
+        ${d.weight?`<p><strong>Weight:</strong> ${d.weight}</p>`:''}
+        ${d.packaging?`<p><strong>Packaging:</strong> ${d.packaging}</p>`:''}
+        ${d.shipping?`<p><strong>Shipping:</strong> ${d.shipping}</p>`:''}
+        <a class="whatsapp-button" href="https://wa.me/447724500272?text=Hello%2C%20I%20would%20like%20to%20inquire%20about%20${encodeURIComponent(product.title)}%20from%20Luxury%20Christmas%20Shop.%20Could%20you%20assist%20me%20with%20pricing%20and%20availability%3F">Chat on WhatsApp</a>
+      </div>
+    </div>
+  `;
+} else {
+  container.innerHTML = '<p>Product not found.</p>';
+}
+</script>
+</body>
+</html>
