@@ -31,34 +31,10 @@
     </div>
   </div>
 </footer>
+
 <script>
 const products = {
-  'epicea-large': {
-    title:'Grand Epicea Tree',
-    img:'images/Grand Epicea Tree.jpg',
-    details: {
-      description:'A majestic, full-bodied spruce with rich green needles, perfect for large living rooms or halls.',
-      height:'Approx. 2.0–2.5m',
-      foliage:'Dense, sharp needles, dark green color',
-      fragrance:'Fresh pine scent, long-lasting',
-      care:'Keep in water; avoid heat sources; trim lower branches if needed',
-      shipping:'Delivered upright with stand included',
-      packaging:'Natural protective wrapping for safe delivery'
-    }
-  },
-  'nordmann-premium': {
-    title:'Premium Nordmann Tree',
-    img:'images/Premium Nordmann Tree.jpeg',
-    details: {
-      description:'Soft-needled tree, ideal for families with children and pets.',
-      height:'Approx. 1.8–2.2m',
-      foliage:'Soft, dark green, glossy needles',
-      fragrance:'Mild, pleasant pine aroma',
-      care:'Keep soil moist; rotate for even growth',
-      shipping:'Delivered upright with protective packaging',
-      packaging:'Elegant wrapping included'
-    }
-  },
+  // TREES
   'picea-deluxe': {
     title:'Deluxe Selection Tree',
     img:'images/Deluxe Selection Tree.jpg',
@@ -69,7 +45,9 @@ const products = {
       fragrance:'Fresh pine fragrance',
       care:'Water daily; avoid radiators and direct sunlight',
       shipping:'Securely packaged for home delivery',
-      packaging:'Premium natural wrap to protect needles'
+      packaging:'Premium natural wrap to protect needles',
+      price:'£89.99',
+      rating:'⭐⭐⭐⭐⭐ (4.9)'
     }
   },
   'sapin-small-elegance': {
@@ -82,7 +60,9 @@ const products = {
       fragrance:'Subtle pine aroma',
       care:'Minimal water needed; place on stable surface',
       shipping:'Delivered in protective box',
-      packaging:'Wrapped for easy unboxing'
+      packaging:'Wrapped for easy unboxing',
+      price:'£49.99',
+      rating:'⭐⭐⭐⭐☆ (4.4)'
     }
   },
   'sapin-artificiel-premium': {
@@ -95,20 +75,9 @@ const products = {
       fragrance:'No natural scent',
       care:'Dust occasionally; store in dry place after holidays',
       shipping:'Flat-packed, easy to assemble',
-      packaging:'Includes tree stand and protective bag'
-    }
-  },
-  'fraser-fir': {
-    title:'Fraser Fir',
-    img:'images/Fraser Fir.jpg',
-    details: {
-      description:'Elegant Christmas tree with strong branches and excellent needle retention.',
-      height:'Approx. 2.0–2.3m',
-      foliage:'Dense, dark green needles, upward-pointing branches',
-      fragrance:'Rich pine aroma, traditional Christmas scent',
-      care:'Water daily; trim bottom branches if needed',
-      shipping:'Delivered upright with stand included',
-      packaging:'Natural protective wrapping included'
+      packaging:'Includes tree stand and protective bag',
+      price:'£119.99',
+      rating:'⭐⭐⭐⭐⭐ (4.8)'
     }
   },
   'blue-spruce': {
@@ -121,7 +90,9 @@ const products = {
       fragrance:'Fresh pine scent',
       care:'Keep soil moist; avoid direct sunlight',
       shipping:'Upright delivery with protective wrap',
-      packaging:'Premium wrapping included'
+      packaging:'Premium wrapping included',
+      price:'£99.99',
+      rating:'⭐⭐⭐⭐⭐ (4.7)'
     }
   },
   'white-pine': {
@@ -134,35 +105,58 @@ const products = {
       fragrance:'Mild pine scent',
       care:'Keep in water; avoid high heat',
       shipping:'Delivered upright safely',
-      packaging:'Protective wrapping included'
+      packaging:'Protective wrapping included',
+      price:'£84.99',
+      rating:'⭐⭐⭐⭐☆ (4.5)'
     }
   },
-  'noble-fir': {
-    title:'Noble Fir',
-    img:'images/Noble Fir.webp',
+  'nordmann-premium': {
+    title:'Nordmann Fir Premium',
+    img:'images/Nordmann Fir Premium.jpg',
     details: {
-      description:'Highly symmetrical tree with premium luxury appearance.',
-      height:'Approx. 2.2–2.5m',
-      foliage:'Dense, soft needles',
-      fragrance:'Classic pine fragrance',
-      care:'Keep in water; avoid heat sources',
-      shipping:'Upright delivery with stand',
-      packaging:'Premium protective wrapping'
+      description:'Soft needles, top European quality, perfect symmetry.',
+      height:'Approx. 2.2m',
+      foliage:'Luxurious dark green needles, dense structure',
+      fragrance:'Fresh pine aroma',
+      care:'Water daily; rotate for even growth',
+      shipping:'Carefully packaged upright',
+      packaging:'Premium wrapping included',
+      price:'£129.99',
+      rating:'⭐⭐⭐⭐⭐ (4.9)'
     }
   },
-  'scotch-pine': {
-    title:'Scotch Pine',
-    img:'images/Scotch Pine.jpg',
+  'fraser-fir': {
+    title:'Fraser Fir',
+    img:'images/Fraser Fir.jpg',
     details: {
-      description:'Classic long-lasting pine aroma with traditional look.',
+      description:'Fragrant, perfectly symmetrical tree, ideal for ornaments.',
+      height:'Approx. 2.0–2.5m',
+      foliage:'Sturdy, dark green needles',
+      fragrance:'Strong natural scent',
+      care:'Keep soil moist; avoid direct heat sources',
+      shipping:'Delivered upright with protective wrap',
+      packaging:'Luxury wrapping included',
+      price:'£109.99',
+      rating:'⭐⭐⭐⭐⭐ (4.8)'
+    }
+  },
+  'balsam-fir': {
+    title:'Balsam Fir',
+    img:'images/Balsam Fir.webp',
+    details: {
+      description:'Strong fir scent and classic holiday appearance.',
       height:'Approx. 2.0m',
-      foliage:'Bright green, long needles',
-      fragrance:'Strong pine scent',
-      care:'Water regularly; rotate for symmetry',
-      shipping:'Safe upright delivery',
-      packaging:'Natural protective wrapping'
+      foliage:'Dense needles, dark green',
+      fragrance:'Rich pine aroma',
+      care:'Water daily; keep away from heaters',
+      shipping:'Secure packaging for home delivery',
+      packaging:'Premium wrap for protection',
+      price:'£94.99',
+      rating:'⭐⭐⭐⭐☆ (4.6)'
     }
   },
+
+  // CHOCOLATES
   'coffret-or': {
     title:'Gold Gift Box — Fine Chocolates',
     img:'images/Gold Gift Box — Fine Chocolates.webp',
@@ -172,7 +166,9 @@ const products = {
       weight:'Approx. 250g',
       packaging:'Gold luxury box with ribbon',
       storage:'Keep in cool dry place, avoid sunlight',
-      shipping:'Delivered in protective packaging'
+      shipping:'Delivered in protective packaging',
+      price:'£39.99',
+      rating:'⭐⭐⭐⭐⭐ (4.9)'
     }
   },
   'coffret-choco-noel': {
@@ -184,7 +180,9 @@ const products = {
       weight:'Approx. 200g',
       packaging:'Festive Christmas box',
       storage:'Keep in cool dry place',
-      shipping:'Safe delivery with protection'
+      shipping:'Safe delivery with protection',
+      price:'£29.99',
+      rating:'⭐⭐⭐⭐⭐ (4.8)'
     }
   },
   'silver-gift-box': {
@@ -196,7 +194,9 @@ const products = {
       weight:'Approx. 300g',
       packaging:'Silver gift box with ribbon',
       storage:'Store in cool dry place',
-      shipping:'Delivered safely'
+      shipping:'Delivered safely',
+      price:'£34.99',
+      rating:'⭐⭐⭐⭐⭐ (4.7)'
     }
   },
   'holiday-chocolate-trio': {
@@ -208,7 +208,37 @@ const products = {
       weight:'3x100g',
       packaging:'Festive mini boxes',
       storage:'Keep in cool dry place',
-      shipping:'Delivered with care'
+      shipping:'Delivered with care',
+      price:'£24.99',
+      rating:'⭐⭐⭐⭐☆ (4.5)'
+    }
+  },
+  'dark-deluxe': {
+    title:'Dark Chocolate Deluxe Box',
+    img:'images/Dark Chocolate Deluxe Box.jpg',
+    details: {
+      description:'70% cocoa — premium selection of dark chocolates.',
+      ingredients:'Dark chocolate, cocoa nibs, ganache',
+      weight:'Approx. 220g',
+      packaging:'Luxury dark box with ribbon',
+      storage:'Keep in cool dry place',
+      shipping:'Delivered safely',
+      price:'£27.99',
+      rating:'⭐⭐⭐⭐⭐ (4.9)'
+    }
+  },
+  'truffle-collection': {
+    title:'Luxury Truffle Collection',
+    img:'images/Luxury Truffle Collection.jpg',
+    details: {
+      description:'Handmade gourmet truffles, ideal for gifting.',
+      ingredients:'Chocolate truffles, ganache, pralines',
+      weight:'Approx. 300g',
+      packaging:'Premium gift box',
+      storage:'Keep in cool dry place',
+      shipping:'Safe delivery included',
+      price:'£44.99',
+      rating:'⭐⭐⭐⭐⭐ (5.0)'
     }
   }
 };
@@ -216,7 +246,6 @@ const products = {
 const urlParams = new URLSearchParams(window.location.search);
 const productId = urlParams.get('id');
 const container = document.getElementById('product-detail');
-
 
 if(products[productId]){
   const product = products[productId];
@@ -235,6 +264,8 @@ if(products[productId]){
         ${d.weight?`<p><strong>Weight:</strong> ${d.weight}</p>`:''}
         ${d.packaging?`<p><strong>Packaging:</strong> ${d.packaging}</p>`:''}
         ${d.shipping?`<p><strong>Shipping:</strong> ${d.shipping}</p>`:''}
+        ${d.price?`<p><strong>Price:</strong> ${d.price}</p>`:''}
+        ${d.rating?`<p><strong>Rating:</strong> ${d.rating}</p>`:''}
         <a class="whatsapp-button" href="https://wa.me/447724500272?text=Hello%2C%20I%20would%20like%20to%20inquire%20about%20${encodeURIComponent(product.title)}%20from%20Luxury%20Christmas%20Shop.%20Could%20you%20assist%20me%20with%20pricing%20and%20availability%3F">Chat on WhatsApp</a>
       </div>
     </div>
